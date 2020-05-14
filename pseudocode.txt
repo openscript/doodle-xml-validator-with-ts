@@ -1,0 +1,41 @@
+Read xmlString
+Initialize i to 0             // i stands for index
+Initialize s to empty stack   // s stands for stack
+Initialize l to 0             // l stands for level
+Initialize b to empty string  // b stands for buffer
+Initialize r to 0             // r stands for root count
+
+while i <= length(xmlString) - 1, do:
+  if xmlString[i] = '<' and xmlString[i + 1] != '/', then:
+    Increment l
+  else if xmlString[i] = '<' and xmlString[i + 1] = '/', then:
+    Decrement l
+    if l <= 0
+      Increment r
+    end
+    Increment i
+  else if size of s < l and xmlString[i] = '>', then:
+    Push b to s
+    Empty b
+  else if size of s > l and xmlString[i] = '>', then:
+    Initialize top to pop s
+    if top != b 
+      return false
+    end if
+    Empty b
+  else if xmlString[i] = '/' and xmlString[i + 1] = '>', then:
+    Decrement l
+    if l <= 0
+      Increment r
+    end
+    Empty b
+    Increment i
+  else if size of s != l, then:
+    Add xmlString[i] to b
+  end if
+
+  Increment i
+end while
+
+return l = 0 and size of s = 0 and r = 1
+Stop.

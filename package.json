@@ -1,0 +1,20 @@
+{
+  "name": "doodle-xml-validator-with-ts",
+  "version": "0.0.1",
+  "description": "A try to doodle a xml validator within an hour in Typescript.",
+  "repository": "git@github.com:openscript/doodle-xml-validator-with-ts.git",
+  "author": "Robin <1105080+openscript@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "jest": "^25.5.4",
+    "ts-jest": "^25.5.1",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "lib": ["es6", "DOM"],
+    "allowJs": false,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "moduleResolution": "node",
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
